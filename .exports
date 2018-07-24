@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add home directory to PATH
+export PATH=$PATH:~/
+
+# Set the path for Golang
+export GOPATH="$HOME/golang"
+# Add go bin into PATH
+export PATH="$GOPATH/bin:$PATH"
+
+# Add Latex commands into PATH
+export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
+
+# Add mysql@5.7
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# Add protoc into PATH
+export PATH="$HOME/protoc/bin:$PATH"
+
+# Add frp into the PATH
+export PATH="$HOME/frp_0.20.0_darwin_amd64:$PATH"
+
+# Configure pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
