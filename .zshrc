@@ -95,3 +95,7 @@ unset file;
 
 # Add zsh-syntex-highlighting for terminal
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Add completions of bazel downloaded with
+# https://github.com/bazelbuild/bazel/releases/download/0.11.0/bazel-0.11.0-without-jdk-installer-darwin-x86_64.sh
+source /usr/local/lib/bazel/bin/bazel-complete.bash

@@ -7,10 +7,19 @@ export NVM_DIR="$HOME/.nvm"
 # Add home directory to PATH
 export PATH=$PATH:~/
 
-# Set the path for Golang
-export GOPATH="$HOME/golang"
-# Add go bin into PATH
-export PATH="$GOPATH/bin:$PATH"
+########## Custom building for go ##########
+# custom building for go, see https://golang.org/doc/install/source
+
+# Added the path "~/lls" as the work directory for liulishuo
+export GOPATH="$HOME/lls"
+
+# git clone to "/usr/local/go", after the building follow with the affore
+# metioned tutorial, added the "/usr/local/go/bin" into PATH
+export PATH="$(go env GOROOT)/bin:$PATH"
+
+export PATH=$PATH:$(go env GOPATH)/bin
+
+########## Custom building for go ##########
 
 # Add Latex commands into PATH
 export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
@@ -22,7 +31,7 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/protoc/bin:$PATH"
 
 # Add frp into the PATH
-export PATH="$HOME/frp_0.20.0_darwin_amd64:$PATH"
+export PATH="$HOME/frp:$PATH"
 
 # Configure pyenv
 export PYENV_ROOT="$HOME/.pyenv"
