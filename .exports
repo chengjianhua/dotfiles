@@ -13,6 +13,8 @@ export PATH=$PATH:~/
 # Added the path "~/lls" as the work directory for liulishuo
 export GOPATH="$HOME/lls"
 
+export GOROOT="/usr/local/go"
+
 # git clone to "/usr/local/go", after the building follow with the affore
 # metioned tutorial, added the "/usr/local/go/bin" into PATH
 export PATH="/usr/local/go/bin:$PATH"

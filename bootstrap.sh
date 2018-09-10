@@ -2,6 +2,11 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
+# # link to the root of brew installed go
+# if ! [[ -L "/usr/local/go" ]]; then
+#   sudo ln -s $(dirname $(dirname $(realpath /usr/local/bin/go))) /usr/local/go;
+# fi;
+
 git pull origin master;
 
 function doIt() {
@@ -12,6 +17,9 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
+
+	echo "rsync completed"
+
 	source ~/.zshrc;
 }
 
