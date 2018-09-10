@@ -15,9 +15,9 @@ export GOPATH="$HOME/lls"
 
 # git clone to "/usr/local/go", after the building follow with the affore
 # metioned tutorial, added the "/usr/local/go/bin" into PATH
-export PATH="$(go env GOROOT)/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
 
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:${GOPATH}/bin
 
 ########## Custom building for go ##########
 
