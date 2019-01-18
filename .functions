@@ -169,3 +169,9 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# take from https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407
+# sync git submodules and update them in one command
+function git-spull() {
+	git pull "$@" && git submodule sync --recursive && git submodule update --init --recursive
+}
