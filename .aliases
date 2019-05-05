@@ -1,0 +1,5 @@
+alias t='tig'
+alias blb='bazel build -c opt'
+alias blt='bazel test -c opt --test_output=errors --keep_going'
+alias blr='bazel run -c opt'
+alias dc='docker-compose'
