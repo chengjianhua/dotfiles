@@ -7,22 +7,6 @@ export NVM_DIR="$HOME/.nvm"
 # Add home directory to PATH
 export PATH=$PATH:~/
 
-########## Custom building for go ##########
-# custom building for go, see https://golang.org/doc/install/source
-
-# Added the path "~/lls" as the work directory for liulishuo
-export GOPATH="$HOME/lls"
-
-export GOROOT="/usr/local/go"
-
-# git clone to "/usr/local/go", after the building follow with the affore
-# metioned tutorial, added the "/usr/local/go/bin" into PATH
-export PATH="/usr/local/go/bin:$PATH"
-
-export PATH=$PATH:${GOPATH}/bin
-
-########## Custom building for go ##########
-
 # Add Latex commands into PATH
 export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
 
