@@ -34,3 +34,5 @@ fi
 
 # Use the v3 api for cli `etcdctl`
 export ETCDCTL_API=3
+
+export NODE_PATH="$NODE_PATH:$(yarn global dir)/node_modules"
