@@ -2,14 +2,29 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/chengjianhua/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
+
+# Use antigen to manage zsh plugins
+source /usr/local/share/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+
+antigen bundle command-not-found
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-docker
+antigen bundle agkozak/zsh-z
+
+antigen theme vercel/zsh-theme
+
+antigen apply
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#
-# curl https://raw.githubusercontent.com/zeit/zeit.zsh-theme/master/zeit.zsh-theme -Lo ~/.oh-my-zsh/custom/themes/zeit.zsh-theme
-ZSH_THEME="zeit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,9 +68,9 @@ ZSH_THEME="zeit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow-completion k docker zsh-autosuggestions virtualenvwrapper z)
+# plugins=(git git-flow-completion k docker zsh-autosuggestions virtualenvwrapper z)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -96,8 +111,8 @@ done;
 unset file;
 
 # Add zsh-syntex-highlighting for terminal
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Add completions of bazel downloaded with
 # https://github.com/bazelbuild/bazel/releases/download/0.11.0/bazel-0.11.0-without-jdk-installer-darwin-x86_64.sh
-[ -f /usr/local/lib/bazel/bin/bazel-complete.bash ] && source /usr/local/lib/bazel/bin/bazel-complete.bash
+# [ -f /usr/local/lib/bazel/bin/bazel-complete.bash ] && source /usr/local/lib/bazel/bin/bazel-complete.bash
