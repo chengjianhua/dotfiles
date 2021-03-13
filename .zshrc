@@ -116,3 +116,5 @@ unset file;
 # Add completions of bazel downloaded with
 # https://github.com/bazelbuild/bazel/releases/download/0.11.0/bazel-0.11.0-without-jdk-installer-darwin-x86_64.sh
 # [ -f /usr/local/lib/bazel/bin/bazel-complete.bash ] && source /usr/local/lib/bazel/bin/bazel-complete.bash
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

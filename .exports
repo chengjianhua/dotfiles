@@ -15,6 +15,10 @@ export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
 
 # Add mysql@5.7
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# Prefer brew installed bison
+export PATH="/usr/local/opt/bison/bin:$PATH"
+# Prefer brew installed bison
+export PATH="$HOME/go/bin:$PATH"
 
 # Add protoc into PATH
 export PATH="$HOME/protoc/bin:$PATH"
